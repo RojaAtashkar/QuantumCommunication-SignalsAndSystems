@@ -1,0 +1,7 @@
+function [P_correct] = upper_bound(rho, K)
+F = {};
+F{end+1} = rho{2} - rho{1};
+S = F{1}
+for i=1:K-2
+    F{end + 1} = rho{i+2}
+end
